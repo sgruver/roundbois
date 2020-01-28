@@ -30,6 +30,22 @@ class ConfigActivity : AppCompatActivity() {
         sd.mNewSetup = newSetup
         sd.mCurrentSetup = currentSetup
 
+        newWheelSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                sd.setShowNew(true)
+            } else {
+                sd.setShowNew(false)
+            }
+        }
+
+        currentWheelSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked) {
+                sd.setShowCurrent(true)
+            } else {
+                sd.setShowCurrent(false)
+            }
+        }
+
         configNewButton.setOnClickListener {
             val configNewIntent = Intent(this, NewConfigActivity::class.java)
             configNewIntent.putExtra("EXTRA_NEWSETUP", newSetup as Serializable)
