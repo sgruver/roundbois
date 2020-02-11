@@ -8,12 +8,12 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_config.*
 import java.io.Serializable
 
 const val CONFIG_NEW_REQUEST = 1
-const val CONFIG_CURRENT_REQUEST = 2
+const val SELECT_NEW_REQUEST = 2
+const val CONFIG_CURRENT_REQUEST = 3
 
 class ConfigActivity : AppCompatActivity() {
 
@@ -27,8 +27,8 @@ class ConfigActivity : AppCompatActivity() {
         setContentView(R.layout.activity_config)
 
         sd = findViewById<SetupDiagram>(R.id.compareDiagram)
-        sd.mNewSetup = newSetup
-        sd.mCurrentSetup = currentSetup
+        sd.setNewSetup(newSetup)
+        sd.setCurrentSetup(currentSetup)
 
         newWheelSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
@@ -77,7 +77,7 @@ class ConfigActivity : AppCompatActivity() {
             CONFIG_NEW_REQUEST -> {
                 if (resultCode == Activity.RESULT_OK) {
                     newSetup = data?.extras?.get("EXTRA_NEWSETUP") as Setup
-                    sd.mNewSetup = newSetup
+                    sd.setNewSetup(newSetup)
                 }
             }
             CONFIG_CURRENT_REQUEST -> {

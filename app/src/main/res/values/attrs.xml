@@ -3,5 +3,9 @@
     <declare-styleable name="SetupDiagram">
         <attr name="showNew" format="boolean" />
         <attr name="showCurrent" format="boolean" />
+        <attr name="showNewTire" format="boolean" />
+        <attr name="showCurrentTire" format="boolean" />
+        <attr name="showNewFender" format="boolean" />
+        <attr name="showCurrentFender" format="boolean" />
     </declare-styleable>
 </resources>

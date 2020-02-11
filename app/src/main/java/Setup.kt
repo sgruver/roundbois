@@ -1,8 +1,8 @@
 import java.io.Serializable
 
-class Setup(var wheel:Wheel?, var tire:Tire?, var fender:Fender?) : Serializable {
-    constructor(w:Wheel) : this(w,null,null)
-    constructor() : this(null, null,null)
+class Setup(var wheel:Wheel, var tire:Tire, var fender:Fender) : Serializable {
+    //constructor(w:Wheel) : this(w,,)
+    //constructor() : this(null, null,null)
 }
 
 class Wheel(var diameter:Int, var width:Double, var offset:Int, var bore:Double?, var boltPattern:String?, var maxBrake:Int?, var weight:Double?) : Serializable{

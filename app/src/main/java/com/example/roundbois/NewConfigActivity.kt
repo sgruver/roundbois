@@ -24,7 +24,7 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
         setup = intent.extras?.get("EXTRA_NEWSETUP") as Setup
 
         sd = findViewById<SetupDiagram>(R.id.newDiagram)
-        sd.mNewSetup = setup
+        sd.setNewSetup(setup)
 
         // TODO ("note") // WHEEL INIT
         diameterEditText.setText(setup.wheel?.diameter.toString())
@@ -96,50 +96,50 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
 
         when (currentFocus) {
             diameterEditText -> {
-                setup.wheel?.diameter = t.toInt()
+                setup.wheel.diameter = t.toInt()
             }
             widthEditText -> {
-                setup.wheel?.width = t.toDouble()
+                setup.wheel.width = t.toDouble()
             }
             offsetEditText -> {
-                setup.wheel?.offset = t.toInt()
+                setup.wheel.offset = t.toInt()
             }
             boreEditText -> {
-                setup.wheel?.bore = t.toDouble()
+                setup.wheel.bore = t.toDouble()
             }
             boltEditText -> {
-                setup.wheel?.boltPattern = t
+                setup.wheel.boltPattern = t
             }
             brakeEditText -> {
-                setup.wheel?.weight = t.toDouble()
+                setup.wheel.weight = t.toDouble()
             }
             tireWidthEditText -> {
-                setup.tire?.width = t.toInt()
+                setup.tire.width = t.toInt()
             }
             aspectEditText -> {
-                setup.tire?.aspect = t.toInt()
+                setup.tire.aspect = t.toInt()
             }
             widthRangeEditText -> {
-                setup.tire?.widthRange = t
+                setup.tire.widthRange = t
             }
             loadEditText -> {
-                setup.tire?.load = t.toInt()
+                setup.tire.load = t.toInt()
             }
             pullEditText -> {
-                setup.fender?.pull = t.toInt()
+                setup.fender.pull = t.toInt()
             }
             fenderHeightEditText -> {
-                setup.fender?.height = t.toInt()
+                setup.fender.height = t.toInt()
             }
             fenderWidthEditText -> {
-                setup.fender?.width = t.toInt()
+                setup.fender.width = t.toInt()
             }
             camberEditText -> {
-                setup.fender?.camber = t.toDouble()
+                setup.fender.camber = t.toDouble()
             }
         }
 
-        sd.mNewSetup = setup
+        sd.setNewSetup(setup)
     }
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
