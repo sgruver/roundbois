@@ -1,6 +1,5 @@
 package com.example.roundbois
 
-import Setup
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color

@@ -1,6 +1,5 @@
 package com.example.roundbois
 
-import Setup
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -27,15 +26,15 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
         sd.setNewSetup(setup)
 
         // TODO ("note") // WHEEL INIT
-        diameterEditText.setText(setup.wheel?.diameter.toString())
-        widthEditText.setText(setup.wheel?.width.toString())
-        offsetEditText.setText(setup.wheel?.offset.toString())
-        boreEditText.setText(setup.wheel?.bore.toString())
-        insetEditText.setText(setup.wheel?.inset.toString())
-        outsetEditText.setText(setup.wheel?.outset.toString())
-        boltEditText.setText(setup.wheel?.boltPattern.toString())
-        brakeEditText.setText(setup.wheel?.maxBrake.toString())
-        weightEditText.setText(setup.wheel?.weight.toString())
+        diameterEditText.setText(setup.wheel.diameter.toString())
+        widthEditText.setText(setup.wheel.width.toString())
+        offsetEditText.setText(setup.wheel.offset.toString())
+        boreEditText.setText(setup.wheel.bore.toString())
+        insetEditText.setText(setup.wheel.inset.toString())
+        outsetEditText.setText(setup.wheel.outset.toString())
+        boltEditText.setText(setup.wheel.boltPattern.toString())
+        brakeEditText.setText(setup.wheel.maxBrake.toString())
+        weightEditText.setText(setup.wheel.weight.toString())
 
         diameterEditText.addTextChangedListener(this)
         widthEditText.addTextChangedListener(this)
@@ -47,14 +46,14 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
 
 
         // TODO("note") // TIRE INIT
-        tireWidthEditText.setText(setup.tire?.width.toString())
-        aspectEditText.setText(setup.tire?.width.toString())
-        stretchEditText.setText(setup.tire?.stretch.toString())
-        sidewallEditText.setText(setup.tire?.sidewall.toString())
-        circumferenceEditText.setText(setup.tire?.circumference.toString())
-        revsEditText.setText(setup.tire?.revMile.toString())
-        widthRangeEditText.setText(setup.tire?.widthRange.toString())
-        loadEditText.setText(setup.tire?.load.toString())
+        tireWidthEditText.setText(setup.tire.width.toString())
+        aspectEditText.setText(setup.tire.width.toString())
+        stretchEditText.setText(setup.tire.stretch.toString())
+        sidewallEditText.setText(setup.tire.sidewall.toString())
+        circumferenceEditText.setText(setup.tire.circumference.toString())
+        revsEditText.setText(setup.tire.revMile.toString())
+        widthRangeEditText.setText(setup.tire.widthRange.toString())
+        loadEditText.setText(setup.tire.load.toString())
 
         tireWidthEditText.addTextChangedListener(this)
         aspectEditText.addTextChangedListener(this)
@@ -63,13 +62,13 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
 
 
         // TODO("note") // FENDER INIT
-        pullEditText.setText(setup.fender?.pull.toString())
-        fenderHeightEditText.setText(setup.fender?.height.toString())
-        fenderWidthEditText.setText(setup.fender?.width.toString())
+        pullEditText.setText(setup.fender.pull.toString())
+        fenderHeightEditText.setText(setup.fender.height.toString())
+        fenderWidthEditText.setText(setup.fender.width.toString())
         //fenderOffsetEditText.setText(setup.fender?.pull.toString())
-        tuckEditText.setText(setup.fender?.tuck.toString())
-        camberEditText.setText(setup.fender?.camber.toString())
-        fitmentEditText.setText(setup.fender?.fitment.toString())
+        tuckEditText.setText(setup.fender.tuck.toString())
+        camberEditText.setText(setup.fender.camber.toString())
+        fitmentEditText.setText(setup.fender.fitment.toString())
 
         pullEditText.addTextChangedListener(this)
         fenderHeightEditText.addTextChangedListener(this)

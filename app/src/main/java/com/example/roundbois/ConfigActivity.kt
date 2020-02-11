@@ -1,9 +1,5 @@
 package com.example.roundbois
 
-import Fender
-import Setup
-import Tire
-import Wheel
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

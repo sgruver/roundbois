@@ -1,3 +1,5 @@
+package com.example.roundbois
+
 import java.io.Serializable
 
 class Setup(var wheel:Wheel, var tire:Tire, var fender:Fender) : Serializable {
