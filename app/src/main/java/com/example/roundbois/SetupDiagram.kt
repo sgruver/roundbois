@@ -18,15 +18,23 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
     lateinit private var mCurrent: Setup
 
     // Drawing params
+    private var sf: Float = 0f
+    private var xC: Float = 0f
+    private var yC: Float = 0f
     private var maxWidth : Float = 100f
     private var maxHeight : Float = 400f
 
+
     private val newPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.CYAN
+        style = Paint.Style.STROKE
+        strokeWidth = 10F
     }
 
     private val currentPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.MAGENTA
+        style = Paint.Style.STROKE
+        strokeWidth = 10F
     }
 
     init {
@@ -80,11 +88,18 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
 
-        var xpad = (paddingRight + paddingLeft).toFloat()
-        var ypad = (paddingTop + paddingBottom).toFloat()
+        val xpad = (paddingRight + paddingLeft).toFloat()
+        val ypad = (paddingTop + paddingBottom).toFloat()
 
         maxWidth = w.toFloat() - xpad
         maxHeight = h.toFloat() - ypad
+
+        xC = maxWidth/2 + paddingLeft
+        yC = maxHeight/2 + paddingTop
+
+        if (!::mCurrent.isInitialized) sf = maxHeight / mNew.totalHeight.toFloat()
+        else if (!::mNew.isInitialized) sf = maxHeight / mCurrent.totalHeight.toFloat()
+        else sf = maxHeight / Math.max(mNew.totalHeight,mCurrent.totalHeight).toFloat()
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -93,16 +108,16 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
         if (mShowNew || mShowCurrent)
             canvas?.apply {
                 if (mShowCurrent){
-                    val w: Float = mCurrent.wheel.width.toFloat()
-                    val d: Float = mCurrent.wheel.diameter.toFloat()
+                    val w: Float = ((mCurrent.wheel.width * sf) / 2).toFloat()
+                    val d: Float = ((mCurrent.wheel.diameter * sf) / 2)
 
-                    drawRect(100f,100f,100f+w*10,100f+d*10, currentPaint)
+                    drawRect(xC - w, yC - d, xC + w, yC + d, currentPaint)
                 }
                 if (mShowNew){
-                    val w: Float = mNew.wheel.width.toFloat()
-                    val d: Float = mNew.wheel.diameter.toFloat()
+                    val w: Float = ((mNew.wheel.width * sf) / 2).toFloat()
+                    val d: Float = ((mNew.wheel.diameter * sf) / 2)
 
-                    drawRect(100f,100f,100f+w*10,100f+d*10,newPaint)
+                    drawRect(xC - w, yC - d, xC + w, yC + d,newPaint)
                 }
                 if (mShowNewTire) {
 
@@ -112,4 +127,9 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
                 }
             }
     }
+
+    fun toMM(x: Double): Double = x * 25.4
+    fun toMM(x: Float): Float = x * 25.4f
+    fun toIN(x: Double): Double = x * 0.0393701
+    fun toIN(x: Float): Float = x * 0.0393701f
 }
