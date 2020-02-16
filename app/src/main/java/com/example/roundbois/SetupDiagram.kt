@@ -106,36 +106,41 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
         else if (!::mNew.isInitialized) sf = maxHeight / mCurrent.totalHeight.toFloat()
         else sf = maxHeight / max(mNew.totalHeight,mCurrent.totalHeight).toFloat()
 
-        if (mShowNew || mShowCurrent)
-            canvas?.apply {
-                if (mShowCurrent){
-                    val w: Float = ((mCurrent.wheel.width * sf) / 2).toFloat()
-                    val d: Float = ((mCurrent.wheel.diameter * sf) / 2)
-                    val o: Float = toIN(mCurrent.wheel.offset.toFloat()) * sf
+        if (mShowNew || mShowCurrent) canvas?.apply {
+            if (mShowCurrent){
+                val w: Float = ((mCurrent.wheel.width * sf) / 2).toFloat()
+                val d: Float = ((mCurrent.wheel.diameter * sf) / 2)
+                val o: Float = toIN(mCurrent.wheel.offset.toFloat()) * sf
 
-                    drawRect(xC - w + o, yC - d, xC + w + o, yC + d, currentPaint)
-                }
-                if (mShowCurrentTire) {
-
-                }
-
-                
-
-                if (mShowNew){
-                    val w: Float = ((mNew.wheel.width * sf) / 2).toFloat()
-                    val d: Float = ((mNew.wheel.diameter * sf) / 2)
-                    val o: Float = toIN(mNew.wheel.offset.toFloat()) * sf
-
-                    drawRect(xC - w + o, yC - d, xC + w + o, yC + d,newPaint)
-                }
-                if (mShowNewTire) {
-
-                }
+                canvas.save()
+                canvas.rotate(mCurrent.fender.camber.toFloat(),xC,yC)
+                drawRect(xC - w + o, yC - d, xC + w + o, yC + d, currentPaint)
+                canvas.restore()
             }
+            if (mShowCurrentTire) {
+
+            }
+
+
+
+            if (mShowNew){
+                val w: Float = ((mNew.wheel.width * sf) / 2).toFloat()
+                val d: Float = ((mNew.wheel.diameter * sf) / 2)
+                val o: Float = toIN(mNew.wheel.offset.toFloat()) * sf
+
+                canvas.save()
+                canvas.rotate(mNew.fender.camber.toFloat(),xC,yC)
+                drawRect(xC - w + o, yC - d, xC + w + o, yC + d,newPaint)
+                canvas.restore()
+            }
+            if (mShowNewTire) {
+
+            }
+        }
     }
 
     fun toMM(x: Double): Double = x * 25.4
     fun toMM(x: Float): Float = x * 25.4f
     fun toIN(x: Double): Double = x * 0.0393701
-    fun toIN(x: Float): Float = x * 0.0393701f
+    private fun toIN(x: Float): Float = x * 0.0393701f
 }
