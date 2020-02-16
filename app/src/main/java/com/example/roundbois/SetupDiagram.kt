@@ -111,20 +111,24 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
                 if (mShowCurrent){
                     val w: Float = ((mCurrent.wheel.width * sf) / 2).toFloat()
                     val d: Float = ((mCurrent.wheel.diameter * sf) / 2)
-                    //val o: Float = (())
+                    val o: Float = toIN(mCurrent.wheel.offset.toFloat()) * sf
 
-                    drawRect(xC - w, yC - d, xC + w, yC + d, currentPaint)
+                    drawRect(xC - w + o, yC - d, xC + w + o, yC + d, currentPaint)
                 }
+                if (mShowCurrentTire) {
+
+                }
+
+                
+
                 if (mShowNew){
                     val w: Float = ((mNew.wheel.width * sf) / 2).toFloat()
                     val d: Float = ((mNew.wheel.diameter * sf) / 2)
+                    val o: Float = toIN(mNew.wheel.offset.toFloat()) * sf
 
-                    drawRect(xC - w, yC - d, xC + w, yC + d,newPaint)
+                    drawRect(xC - w + o, yC - d, xC + w + o, yC + d,newPaint)
                 }
                 if (mShowNewTire) {
-
-                }
-                if (mShowCurrentTire) {
 
                 }
             }

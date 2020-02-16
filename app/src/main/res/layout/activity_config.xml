@@ -21,7 +21,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:layout_gravity="center"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp" />
         </TableRow>
 
         <TableRow

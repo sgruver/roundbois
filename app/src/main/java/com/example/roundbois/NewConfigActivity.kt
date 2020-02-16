@@ -90,8 +90,8 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
      *
      */
     override fun afterTextChanged(s: Editable?) {
-        var t : String = s.toString()
-        if (t == "") t = "0"
+        var t = s.toString().replace(Regex("(^[\\d|-]\\d*\\.{0,1}\\d{0,2})"),"$1")
+        if (t == "" || t == "-") t = "0"
 
         when (currentFocus) {
             diameterEditText -> {
