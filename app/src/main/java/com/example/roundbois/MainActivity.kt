@@ -14,5 +14,10 @@ class MainActivity : AppCompatActivity() {
             val configIntent = Intent(this, ConfigActivity::class.java)
             startActivity(configIntent)
         }
+
+        cameraButton.setOnClickListener{
+            val cameraIntent = Intent(this, CameraActivity::class.java)
+            startActivity(cameraIntent)
+        }
     }
 }
