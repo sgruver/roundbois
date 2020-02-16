@@ -33,7 +33,7 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
     }
 
     private val currentPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.MAGENTA
+        color = Color.YELLOW
         style = Paint.Style.STROKE
         strokeWidth = 10F
     }
