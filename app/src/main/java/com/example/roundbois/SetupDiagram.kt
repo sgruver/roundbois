@@ -97,10 +97,6 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
 
         xC = maxWidth/2 + paddingLeft
         yC = maxHeight/2 + paddingTop
-
-        //if (!::mCurrent.isInitialized) sf = maxHeight / mNew.totalHeight.toFloat()
-        //else if (!::mNew.isInitialized) sf = maxHeight / mCurrent.totalHeight.toFloat()
-        //else sf = maxHeight / Math.max(mNew.totalHeight,mCurrent.totalHeight).toFloat()
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -115,6 +111,7 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
                 if (mShowCurrent){
                     val w: Float = ((mCurrent.wheel.width * sf) / 2).toFloat()
                     val d: Float = ((mCurrent.wheel.diameter * sf) / 2)
+                    //val o: Float = (())
 
                     drawRect(xC - w, yC - d, xC + w, yC + d, currentPaint)
                 }

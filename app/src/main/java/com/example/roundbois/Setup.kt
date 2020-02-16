@@ -3,11 +3,8 @@ package com.example.roundbois
 import java.io.Serializable
 
 class Setup(var wheel:Wheel, var tire:Tire, var fender:Fender) : Serializable {
-    var diameter = this.wheel.diameter
-    var sidewall = this.tire.sidewall
-    var depth = this.fender.depth
-
-    var totalHeight = diameter + (2 * sidewall) + depth
+    val totalHeight: Double
+        get() = this.wheel.diameter + (2 * this.tire.sidewall) + this.fender.depth
 }
 
 class Wheel(var diameter:Int, var width:Double, var offset:Int, var bore:Double?, var boltPattern:String?, var maxBrake:Int?, var weight:Double?) : Serializable{
