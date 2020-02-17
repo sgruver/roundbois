@@ -116,7 +116,18 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
             drawRect(xC - w + o, yC - d, xC + w + o, yC + d, currentPaint)
 
             if (mShowCurrentTire) {
+                val ts: Float = (mCurrent.tire.sidewall * sf).toFloat()
+                val tw: Float = (toIN(mCurrent.tire.width.toFloat()) * sf / 2)
 
+                // top of tire
+                drawLine(xC - tw + o,yC - d - ts,xC + tw + o, yC - d - ts, currentPaint)
+                drawLine(xC - tw + o,yC - d - ts,xC - w + o,yC - d, currentPaint)
+                drawLine(xC + tw + o,yC - d - ts,xC + w + o,yC - d, currentPaint)
+
+                // bottom of tire
+                drawLine(xC - tw + o,yC + d + ts,xC + tw + o, yC + d + ts, currentPaint)
+                drawLine(xC - tw + o,yC + d + ts,xC - w + o,yC + d, currentPaint)
+                drawLine(xC + tw + o,yC + d + ts,xC + w + o,yC - d, currentPaint)
             }
 
             canvas.restore()
@@ -132,7 +143,18 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
             drawRect(xC - w + o, yC - d, xC + w + o, yC + d,newPaint)
 
             if (mShowNewTire) {
+                val ts: Float = (mNew.tire.sidewall * sf).toFloat()
+                val tw: Float = (toIN(mNew.tire.width.toFloat()) * sf / 2)
 
+                // top of tire
+                drawLine(xC - tw + o,yC - d - ts,xC + tw + o, yC - d - ts, newPaint)
+                drawLine(xC - tw + o,yC - d - ts,xC - w + o,yC - d, newPaint)
+                drawLine(xC + tw + o,yC - d - ts,xC + w + o,yC - d, newPaint)
+
+                // bottom of tire
+                drawLine(xC - tw + o,yC + d + ts,xC + tw + o, yC + d + ts, newPaint)
+                drawLine(xC - tw + o,yC + d + ts,xC - w + o,yC + d, newPaint)
+                drawLine(xC + tw + o,yC + d + ts,xC + w + o,yC + d, newPaint)
             }
 
             canvas.restore()
