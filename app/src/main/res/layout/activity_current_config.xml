@@ -7,21 +7,21 @@
     tools:context=".CurrentConfigActivity">
 
     <TableLayout
+        android:id="@+id/curConfigTable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
         android:layout_marginTop="0dp">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <com.example.roundbois.SetupDiagram
+                android:id="@+id/curDiagram"
                 android:layout_width="wrap_content"
                 android:layout_height="400dp"
-
-                android:scaleType="centerCrop"
-                tools:srcCompat="@tools:sample/backgrounds/scenic[2]" />
+                app:showCurrent="true"
+                app:showNew="false" />
         </TableRow>
 
         <TableRow
@@ -43,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:layout_width="0dp"
@@ -71,7 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:layout_width="0dp"
@@ -99,13 +101,185 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:ems="10"
-                android:inputType="numberSigned" />
+                android:inputType="numberSigned"
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="mm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Bore"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/boreEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="mm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Inset"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/insetEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="none"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="in" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Outset"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/outsetEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="none"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="in" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Bolt Pattern"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/boltEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Max Brake"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/brakeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="number"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="mm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Weight"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/weightEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="kg" />
         </TableRow>
 
         <TableRow
@@ -118,7 +292,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="Tire Width"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
                 android:id="@+id/tireWidthEditText"
@@ -126,7 +301,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:layout_width="0dp"
@@ -146,7 +322,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="Aspect"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
                 android:id="@+id/aspectEditText"
@@ -154,7 +331,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textAlignment="textEnd" />
 
             <TextView
                 android:layout_width="0dp"
@@ -165,18 +343,73 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/camberTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
-                android:text="Camber"
-                android:textAlignment="textEnd" />
+                android:text="Stretch"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
-                android:id="@+id/camberEditText"
+                android:id="@+id/stretchEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="none"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Sidewall"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/sidewallEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="none"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="mm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Circumference"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/circumferenceEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
@@ -187,34 +420,111 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
-                android:text="degrees" />
+                android:text="mm" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/fenderWidthTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
-                android:text="Fender Width"
-                android:textAlignment="textEnd" />
+                android:text="Rev/Mile"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
-                android:id="@+id/fenderWidthEditText"
+                android:id="@+id/revsEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:ems="10"
-                android:inputType="none" />
+                android:inputType="number" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
-                android:text="mm" />
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Width Range"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/widthRangeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Load"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/loadEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="kg" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Pull"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/pullEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="numberSigned" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="TextView" />
         </TableRow>
 
         <TableRow
@@ -227,7 +537,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="Fender Height"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
                 android:id="@+id/fenderHeightEditText"
@@ -249,12 +560,40 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/fenderOffsetTextView"
+                android:id="@+id/fenderWidthTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
-                android:text="Fender Offset"
-                android:textAlignment="textEnd" />
+                android:text="Fender Width"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/fenderWidthEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="none" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="mm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Clearance"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
             <EditText
                 android:id="@+id/fenderOffsetEditText"
@@ -269,6 +608,100 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="mm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Tuck"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/tuckEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="numberSigned" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="mm" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/camberTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Camber"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/camberEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="number"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="degrees" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="Fitment"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/fitmentEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/saveNewButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save" />
         </TableRow>
     </TableLayout>
 </ScrollView>

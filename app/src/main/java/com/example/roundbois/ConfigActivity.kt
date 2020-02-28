@@ -53,7 +53,9 @@ class ConfigActivity : AppCompatActivity() {
         }
 
         configCurrentButton.setOnClickListener {
-
+            val configCurrentIntent = Intent(this, CurrentConfigActivity::class.java)
+            configCurrentIntent.putExtra("EXTRA_CURRENTSETUP", currentSetup as Serializable)
+            startActivityForResult(configCurrentIntent, CONFIG_CURRENT_REQUEST)
         }
 
         selectCurrentButton.setOnClickListener {
@@ -77,7 +79,10 @@ class ConfigActivity : AppCompatActivity() {
                 }
             }
             CONFIG_CURRENT_REQUEST -> {
-                if (resultCode == Activity.RESULT_OK) currentSetup = data?.extras?.get("EXTRA_CURRENTSETUP") as Setup
+                if (resultCode == Activity.RESULT_OK) {
+                    currentSetup = data?.extras?.get("EXTRA_CURRENTSETUP") as Setup
+                    sd.setCurrentSetup(currentSetup)
+                }
             }
         }
     }
