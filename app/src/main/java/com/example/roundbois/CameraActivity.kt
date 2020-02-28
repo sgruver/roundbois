@@ -18,9 +18,11 @@ import java.util.concurrent.TimeUnit
 import android.util.DisplayMetrics
 import android.util.Log
 import android.widget.ImageButton
+import androidx.camera.camera2.Camera2AppConfig
 import androidx.camera.core.*
 import java.io.File
 import java.nio.ByteBuffer
+import java.security.AccessController.getContext
 
 
 // This is an arbitrary number we are using to keep track of the permission
@@ -34,8 +36,9 @@ private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
 class CameraActivity : AppCompatActivity(), LifecycleOwner {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        //CameraX.init(getContext(), Camera2AppConfig.create(getContext()))
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.camera_activity)
 
         viewFinder = findViewById(R.id.view_finder)
 
