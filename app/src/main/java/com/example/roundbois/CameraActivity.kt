@@ -69,6 +69,8 @@ class CameraActivity : AppCompatActivity(), LifecycleOwner {
         val width = displayMetrics.widthPixels
         val height = displayMetrics.heightPixels
 
+        val localizerIntent = Intent(this, LocalizerActivity::class.java)
+
         val previewConfig = PreviewConfig.Builder().apply {
             setTargetResolution(Size(width, height))
         }.build()
@@ -122,13 +124,15 @@ class CameraActivity : AppCompatActivity(), LifecycleOwner {
                     override fun onImageSaved(file: File) {
                         val msg = "Photo capture succeeded: ${file.absolutePath}"
                         Log.d("CameraXApp", msg)
+
                         viewFinder.post {
                             Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
                             //JEB - Save image to bundle and call FindWheel via intents
-                            intent.putExtra("picture", file)
+                            localizerIntent.putExtra("picture", file.absolutePath)
 
 
                         }
+                        startActivity(localizerIntent)
                     }
                 })
         }
@@ -219,7 +223,7 @@ class CameraActivity : AppCompatActivity(), LifecycleOwner {
         //Modify this for use with the wheel finder
         override fun analyze(image: ImageProxy, rotationDegrees: Int) {
             val currentTimestamp = System.currentTimeMillis()
-            // Calculate the average luma no more often than every second
+            // convert the array of pixels to RGB
             if (currentTimestamp - lastAnalyzedTimestamp >=
                 TimeUnit.SECONDS.toMillis(1)) {
 
@@ -234,10 +238,6 @@ class CameraActivity : AppCompatActivity(), LifecycleOwner {
                 val pixels = data.map { it.toInt() and 0xFF }
 
                 // Compute average luminance for the image
-                val luma = pixels.average()
-
-                // Log the new luma value
-                Log.d("CameraXApp", "Average luminosity: $luma")
 
                 // Update timestamp of last analyzed frame
                 lastAnalyzedTimestamp = currentTimestamp

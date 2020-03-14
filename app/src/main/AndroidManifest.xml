@@ -21,6 +21,7 @@
                 <action android:name="android.intent.action.IMAGE_CAPTURE" />
             </intent-filter>
         </activity>
+        <activity android:name=".LocalizerActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
