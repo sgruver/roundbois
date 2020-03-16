@@ -23,9 +23,9 @@ class Tire(var diameter:Int, var width:Int, var aspect:Int, var widthRange:Strin
     constructor() : this(18, 255, 35, null, null)
 }
 
-class Fender(var pull:Int, var height:Int, var width:Int, var depth:Int, var camber:Double) : Serializable {
+class Fender(var pull:Double, var height:Double, var width:Double, var depth:Double, var camber:Double) : Serializable {
     var tuck: Int? = null
     var fitment: Int? = null
 
-    constructor() : this(1, 27, 1, 4, 0.0)
+    constructor() : this(4.0, 27.0, 1.0, 4.0, 0.0)
 }

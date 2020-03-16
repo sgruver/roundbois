@@ -76,6 +76,16 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
         requestLayout()
     }
 
+    fun isShowNewTire(): Boolean {
+        return mShowNewTire
+    }
+
+    fun setShowNewTire(showNewTire: Boolean) {
+        mShowNewTire = showNewTire
+        invalidate()
+        requestLayout()
+    }
+
     fun setNewSetup(setup: Setup) {
         mNew = setup
         invalidate()
@@ -127,7 +137,16 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
                 // bottom of tire
                 drawLine(xC - tw + o,yC + d + ts,xC + tw + o, yC + d + ts, currentPaint)
                 drawLine(xC - tw + o,yC + d + ts,xC - w + o,yC + d, currentPaint)
-                drawLine(xC + tw + o,yC + d + ts,xC + w + o,yC - d, currentPaint)
+                drawLine(xC + tw + o,yC + d + ts,xC + w + o,yC + d, currentPaint)
+            }
+
+            if (mShowCurrentFender) {
+                val fw: Float = (mCurrent.fender.width * sf).toFloat()
+                val fp: Float = (mCurrent.fender.pull * sf).toFloat()
+                val fh: Float = (mCurrent.fender.height * sf).toFloat()
+
+                // draw fender
+                //drawLine(xC - fp,yC -)
             }
 
             canvas.restore()

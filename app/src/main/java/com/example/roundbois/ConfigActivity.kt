@@ -42,6 +42,14 @@ class ConfigActivity : AppCompatActivity() {
             }
         }
 
+        newTireSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                sd.setShowNewTire(true)
+            } else {
+                sd.setShowNewTire(false)
+            }
+        }
+
         configNewButton.setOnClickListener {
             val configNewIntent = Intent(this, NewConfigActivity::class.java)
             configNewIntent.putExtra("EXTRA_NEWSETUP", newSetup as Serializable)

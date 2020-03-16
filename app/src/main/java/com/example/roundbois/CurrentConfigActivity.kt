@@ -119,13 +119,13 @@ class CurrentConfigActivity : AppCompatActivity(), TextWatcher{
                 setup.tire.load = t.toInt()
             }
             pullEditText -> {
-                setup.fender.pull = t.toInt()
+                setup.fender.pull = t.toDouble()
             }
             fenderHeightEditText -> {
-                setup.fender.height = t.toInt()
+                setup.fender.height = t.toDouble()
             }
             fenderWidthEditText -> {
-                setup.fender.width = t.toInt()
+                setup.fender.width = t.toDouble()
             }
             camberEditText -> {
                 setup.fender.camber = t.toDouble()
