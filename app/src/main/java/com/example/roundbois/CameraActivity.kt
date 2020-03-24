@@ -24,6 +24,8 @@ import java.io.File
 import java.nio.ByteBuffer
 import java.security.AccessController.getContext
 
+// section to keep track of todos that aren't located. read bugs.
+//TODO On phone the preview shows one picture in the past.
 
 // This is an arbitrary number we are using to keep track of the permission
 // request. Where an app has multiple context for requesting permission,
@@ -124,13 +126,10 @@ class CameraActivity : AppCompatActivity(), LifecycleOwner {
                     override fun onImageSaved(file: File) {
                         val msg = "Photo capture succeeded: ${file.absolutePath}"
                         Log.d("CameraXApp", msg)
-
+                        localizerIntent.putExtra("picture", file.absolutePath)
                         viewFinder.post {
                             Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
-                            //JEB - Save image to bundle and call FindWheel via intents
-                            localizerIntent.putExtra("picture", file.absolutePath)
-
-
+                            //JEB - Save image to bundle and call FindWheel via intent
                         }
                         startActivity(localizerIntent)
                     }
