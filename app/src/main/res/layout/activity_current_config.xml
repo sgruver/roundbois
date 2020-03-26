@@ -28,60 +28,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/diameterTextView"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Diameter"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_weight=".5">
 
-            <EditText
-                android:id="@+id/diameterEditText"
+                <EditText
+                    android:id="@+id/diameterEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="diameter (in)"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:hint="diameter"
-                android:inputType="number"
-                android:singleLine="true"
-                android:textAlignment="textStart" />
+                android:layout_weight=".5">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="in" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/widthTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Width"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/widthEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="in" />
+                <EditText
+                    android:id="@+id/widthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="width (in)"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="textStart" />
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
 
         <TableRow
