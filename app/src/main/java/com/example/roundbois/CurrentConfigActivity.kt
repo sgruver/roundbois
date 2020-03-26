@@ -2,10 +2,14 @@ package com.example.roundbois
 
 import android.app.Activity
 import android.content.Intent
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_current_config.*
 import java.io.Serializable
 
@@ -72,6 +76,20 @@ class CurrentConfigActivity : AppCompatActivity(), TextWatcher{
         fenderWidthEditText.addTextChangedListener(this)
         camberEditText.addTextChangedListener(this)
 
+
+        collapseButton.setOnClickListener {
+            if(boreTR.isVisible){
+                boreTR.visibility = View.GONE
+                insetTR.visibility = View.GONE
+                outsetTR.visibility = View.GONE
+                boltPatternTR.visibility = View.GONE
+            } else {
+                boreTR.visibility = View.VISIBLE
+                insetTR.visibility = View.VISIBLE
+                outsetTR.visibility = View.VISIBLE
+                boltPatternTR.visibility = View.VISIBLE
+            }
+        }
 
         saveNewButton.setOnClickListener {
             val saveIntent = Intent().apply{

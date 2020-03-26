@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
 import kotlin.math.max
+import kotlin.math.round
 
 class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs) {
     private var mShowNew : Boolean
