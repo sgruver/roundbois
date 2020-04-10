@@ -125,6 +125,7 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
             canvas.save()
             canvas.rotate(mCurrent.fender.camber.toFloat(),xC,yC)
             drawRect(xC - w + o, yC - d, xC + w + o, yC + d, currentPaint)
+            drawLine(xC,yC+d,xC,yC-d, currentPaint)
 
             if (mShowCurrentTire) {
                 val ts: Float = (mCurrent.tire.sidewall * sf).toFloat()
@@ -161,6 +162,7 @@ class SetupDiagram(context: Context, attrs: AttributeSet) : View (context, attrs
             canvas.save()
             canvas.rotate(mNew.fender.camber.toFloat(),xC,yC)
             drawRect(xC - w + o, yC - d, xC + w + o, yC + d,newPaint)
+            drawLine(xC,yC+d,xC,yC-d, newPaint)
 
             if (mShowNewTire) {
                 val ts: Float = (mNew.tire.sidewall * sf).toFloat()
