@@ -83,11 +83,43 @@ class CurrentConfigActivity : AppCompatActivity(), TextWatcher{
                 insetTR.visibility = View.GONE
                 outsetTR.visibility = View.GONE
                 boltPatternTR.visibility = View.GONE
+                brakeTR.visibility = View.GONE
+                weightTR.visibility = View.GONE
+                tireWidthTR.visibility = View.GONE
+                aspectTR.visibility = View.GONE
+                stretchTR.visibility = View.GONE
+                sidewallTR.visibility = View.GONE
+                circumferenceTR.visibility = View.GONE
+                revsTR.visibility = View.GONE
+                widthRangeTR.visibility = View.GONE
+                loadTR.visibility = View.GONE
+                pullTR.visibility = View.GONE
+                fenderTR.visibility = View.GONE
+                fenderWidthTR.visibility = View.GONE
+                fenderOffsetTR.visibility = View.GONE
+                tuckTR.visibility = View.GONE
+                fitmentTR.visibility = View.GONE
             } else {
                 boreTR.visibility = View.VISIBLE
                 insetTR.visibility = View.VISIBLE
                 outsetTR.visibility = View.VISIBLE
                 boltPatternTR.visibility = View.VISIBLE
+                brakeTR.visibility = View.VISIBLE
+                weightTR.visibility = View.VISIBLE
+                tireWidthTR.visibility = View.VISIBLE
+                aspectTR.visibility = View.VISIBLE
+                stretchTR.visibility = View.VISIBLE
+                sidewallTR.visibility = View.VISIBLE
+                circumferenceTR.visibility = View.VISIBLE
+                revsTR.visibility = View.VISIBLE
+                widthRangeTR.visibility = View.VISIBLE
+                loadTR.visibility = View.VISIBLE
+                pullTR.visibility = View.VISIBLE
+                fenderTR.visibility = View.VISIBLE
+                fenderWidthTR.visibility = View.VISIBLE
+                fenderOffsetTR.visibility = View.VISIBLE
+                tuckTR.visibility = View.VISIBLE
+                fitmentTR.visibility = View.VISIBLE
             }
         }
 

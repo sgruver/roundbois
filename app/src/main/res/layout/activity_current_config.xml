@@ -161,7 +161,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".5">
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
                     <EditText
                         android:id="@+id/boreEditText"
@@ -170,7 +171,8 @@
                         android:ems="10"
                         android:hint="bore (mm)"
                         android:inputType="numberDecimal"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
@@ -182,7 +184,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".5">
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
                     <EditText
                         android:id="@+id/insetEditText"
@@ -191,7 +194,8 @@
                         android:ems="10"
                         android:hint="inset (mm)"
                         android:inputType="none"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </TableRow>
@@ -205,7 +209,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".5">
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
                     <EditText
                         android:id="@+id/outsetEditText"
@@ -214,7 +219,8 @@
                         android:ems="10"
                         android:hint="outset (mm)"
                         android:inputType="none"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
@@ -226,7 +232,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".5">
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
                     <EditText
                         android:id="@+id/boltEditText"
@@ -235,7 +242,8 @@
                         android:ems="10"
                         android:hint="bolt pattern"
                         android:inputType="text"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
                 </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
@@ -248,7 +256,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".5">
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
                     <EditText
                         android:id="@+id/brakeEditText"
@@ -257,7 +266,8 @@
                         android:ems="10"
                         android:hint="brake diameter (mm)"
                         android:inputType="number"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
@@ -269,7 +279,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".5">
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
                     <EditText
                         android:id="@+id/weightEditText"
@@ -278,7 +289,8 @@
                         android:ems="10"
                         android:hint="weight (kg)"
                         android:inputType="numberDecimal"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
                 </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
@@ -286,381 +298,329 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tireWidthTextView"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tireWidthTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Tire Width"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/tireWidthEditText"
+                    <EditText
+                        android:id="@+id/tireWidthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="tire width (mm)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/aspectTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:textAlignment="textEnd" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="mm" />
-
+                    <EditText
+                        android:id="@+id/aspectEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="aspect ratio (%)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/aspectTextView"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/stretchTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Aspect"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/aspectEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:textAlignment="textEnd" />
+                    <EditText
+                        android:id="@+id/stretchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="stretch"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sidewallTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="%" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/sidewallEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="sidewall (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/circumferenceTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Stretch"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/stretchEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="none"
-                    android:textAlignment="textEnd" />
+                    <EditText
+                        android:id="@+id/circumferenceEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="circumference (mm)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/revsTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/revsEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Revs/Mile"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/widthRangeTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Sidewall"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/sidewallEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="none"
-                    android:textAlignment="textEnd" />
+                    <EditText
+                        android:id="@+id/widthRangeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="width range (in)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loadTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="mm" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/loadEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="load (kg)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pullTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Circumference"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/circumferenceEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="number" />
+                    <EditText
+                        android:id="@+id/pullEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="pull (mm)"
+                        android:inputType="numberSigned"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fenderTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="mm" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/fenderHeightEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fender height (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fenderWidthTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Rev/Mile"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/revsEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="number" />
+                    <EditText
+                        android:id="@+id/fenderWidthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fender width (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fenderOffsetTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="TextView" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/fenderOffsetEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fender offset (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tuckTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Width Range"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/widthRangeEditText"
+                    <EditText
+                        android:id="@+id/tuckEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="tuck (mm)"
+                        android:inputType="numberSigned"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fitmentTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".4" />
+                    android:layout_weight=".5"
+                    android:visibility="gone">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Load"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <EditText
-                    android:id="@+id/loadEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="kg" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Pull"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <EditText
-                    android:id="@+id/pullEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="numberSigned" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/fenderHeightTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Fender Height"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <EditText
-                    android:id="@+id/fenderHeightEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="none" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="mm" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/fenderWidthTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Fender Width"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <EditText
-                    android:id="@+id/fenderWidthEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="none" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="mm" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Clearance"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <EditText
-                    android:id="@+id/fenderOffsetEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="none" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="mm" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Tuck"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <EditText
-                    android:id="@+id/tuckEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="numberSigned" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="mm" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
-                    android:text="Fitment"
-                    android:textAlignment="textEnd"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <EditText
-                    android:id="@+id/fitmentEditText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3" />
+                    <EditText
+                        android:id="@+id/fitmentEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fitment"
+                        android:inputType="text"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
         </TableLayout>
     </ScrollView>

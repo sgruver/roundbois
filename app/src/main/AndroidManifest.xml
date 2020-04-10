@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CompareActivity"></activity>
-        <activity android:name=".CurrentConfigActivity" />
-        <activity android:name=".NewConfigActivity" />
+        <activity
+            android:name=".CurrentConfigActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"></activity>
+        <activity
+            android:name=".NewConfigActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"></activity>
         <activity android:name=".ConfigActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
