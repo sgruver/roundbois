@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_new_config.*
 import java.io.Serializable
 
@@ -47,7 +49,7 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
 
         // TODO("note") // TIRE INIT
         tireWidthEditText.setText(setup.tire.width.toString())
-        aspectEditText.setText(setup.tire.width.toString())
+        aspectEditText.setText(setup.tire.aspect.toString())
         stretchEditText.setText(setup.tire.stretch.toString())
         sidewallEditText.setText(setup.tire.sidewall.toString())
         circumferenceEditText.setText(setup.tire.circumference.toString())
@@ -75,6 +77,48 @@ class NewConfigActivity : AppCompatActivity(), TextWatcher{
         fenderWidthEditText.addTextChangedListener(this)
         camberEditText.addTextChangedListener(this)
 
+
+        collapseButton.setOnClickListener {
+            if(boreTR.isVisible){
+                boreTR.visibility = View.GONE
+                insetTR.visibility = View.GONE
+                outsetTR.visibility = View.GONE
+                boltPatternTR.visibility = View.GONE
+                brakeTR.visibility = View.GONE
+                weightTR.visibility = View.GONE
+                stretchTR.visibility = View.GONE
+                sidewallTR.visibility = View.GONE
+                circumferenceTR.visibility = View.GONE
+                revsTR.visibility = View.GONE
+                widthRangeTR.visibility = View.GONE
+                loadTR.visibility = View.GONE
+                pullTR.visibility = View.GONE
+                fenderTR.visibility = View.GONE
+                fenderWidthTR.visibility = View.GONE
+                fenderOffsetTR.visibility = View.GONE
+                tuckTR.visibility = View.GONE
+                fitmentTR.visibility = View.GONE
+            } else {
+                boreTR.visibility = View.VISIBLE
+                insetTR.visibility = View.VISIBLE
+                outsetTR.visibility = View.VISIBLE
+                boltPatternTR.visibility = View.VISIBLE
+                brakeTR.visibility = View.VISIBLE
+                weightTR.visibility = View.VISIBLE
+                stretchTR.visibility = View.VISIBLE
+                sidewallTR.visibility = View.VISIBLE
+                circumferenceTR.visibility = View.VISIBLE
+                revsTR.visibility = View.VISIBLE
+                widthRangeTR.visibility = View.VISIBLE
+                loadTR.visibility = View.VISIBLE
+                pullTR.visibility = View.VISIBLE
+                fenderTR.visibility = View.VISIBLE
+                fenderWidthTR.visibility = View.VISIBLE
+                fenderOffsetTR.visibility = View.VISIBLE
+                tuckTR.visibility = View.VISIBLE
+                fitmentTR.visibility = View.VISIBLE
+            }
+        }
 
         saveNewButton.setOnClickListener {
             val saveIntent = Intent().apply{

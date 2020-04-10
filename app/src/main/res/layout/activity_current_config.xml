@@ -142,6 +142,49 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tireWidthTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+                    <EditText
+                        android:id="@+id/tireWidthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="tire width (mm)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/aspectTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+                    <EditText
+                        android:id="@+id/aspectEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="aspect ratio (%)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
                 <Button
                     android:id="@+id/collapseButton"
                     style="@style/Widget.MaterialComponents.Button"
@@ -289,53 +332,6 @@
                         android:ems="10"
                         android:hint="weight (kg)"
                         android:inputType="numberDecimal"
-                        android:textAlignment="textStart"
-                        android:visibility="visible" />
-                </com.google.android.material.textfield.TextInputLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tireWidthTR"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".5"
-                    android:visibility="gone">
-
-                    <EditText
-                        android:id="@+id/tireWidthEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="tire width (mm)"
-                        android:inputType="number"
-                        android:textAlignment="textStart"
-                        android:visibility="visible" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Space
-                    android:layout_width="16dp"
-                    android:layout_height="wrap_content" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/aspectTR"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".5"
-                    android:visibility="gone">
-
-                    <EditText
-                        android:id="@+id/aspectEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="aspect ratio (%)"
-                        android:inputType="number"
                         android:textAlignment="textStart"
                         android:visibility="visible" />
                 </com.google.android.material.textfield.TextInputLayout>

@@ -16,7 +16,8 @@ class Wheel(var diameter:Int, var width:Double, var offset:Int, var bore:Double?
 
 class Tire(var diameter:Int, var width:Int, var aspect:Int, var widthRange:String?, var load:Int?) : Serializable {
     var stretch: Int? = null
-    var sidewall: Double = (width*aspect*.01)/25.4
+    val sidewall: Double
+        get() = (width*aspect*.01)/25.4
     var circumference: Double = ((sidewall*2)+diameter)*Math.PI
     var revMile: Double = 63360/circumference
 

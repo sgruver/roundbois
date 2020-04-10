@@ -48,7 +48,7 @@ class CurrentConfigActivity : AppCompatActivity(), TextWatcher{
 
         // TODO("note") // TIRE INIT
         tireWidthEditText.setText(setup.tire.width.toString())
-        aspectEditText.setText(setup.tire.width.toString())
+        aspectEditText.setText(setup.tire.aspect.toString())
         stretchEditText.setText(setup.tire.stretch.toString())
         sidewallEditText.setText(setup.tire.sidewall.toString())
         circumferenceEditText.setText(setup.tire.circumference.toString())
@@ -85,8 +85,6 @@ class CurrentConfigActivity : AppCompatActivity(), TextWatcher{
                 boltPatternTR.visibility = View.GONE
                 brakeTR.visibility = View.GONE
                 weightTR.visibility = View.GONE
-                tireWidthTR.visibility = View.GONE
-                aspectTR.visibility = View.GONE
                 stretchTR.visibility = View.GONE
                 sidewallTR.visibility = View.GONE
                 circumferenceTR.visibility = View.GONE
@@ -106,8 +104,6 @@ class CurrentConfigActivity : AppCompatActivity(), TextWatcher{
                 boltPatternTR.visibility = View.VISIBLE
                 brakeTR.visibility = View.VISIBLE
                 weightTR.visibility = View.VISIBLE
-                tireWidthTR.visibility = View.VISIBLE
-                aspectTR.visibility = View.VISIBLE
                 stretchTR.visibility = View.VISIBLE
                 sidewallTR.visibility = View.VISIBLE
                 circumferenceTR.visibility = View.VISIBLE

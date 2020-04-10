@@ -1,735 +1,623 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewConfigActivity">
+    android:padding="16dp"
+    android:scrollbarStyle="outsideInset"
+    tools:context=".NewConfigActivity"
+    android:orientation="vertical">
 
     <TableLayout
-        android:id="@+id/configTable"
+        android:id="@+id/newSDTable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <com.example.roundbois.SetupDiagram
-                android:id="@+id/newDiagram"
-                android:layout_width="wrap_content"
-                android:layout_height="400dp"
-                app:showCurrent="false"
-                app:showNew="true" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/diameterTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Diameter"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/diameterEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="number"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="in" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/widthTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Width"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/widthEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="in" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/offsetTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Offset"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/offsetEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="numberSigned"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Bore"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/boreEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Inset"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/insetEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="none"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="in" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Outset"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/outsetEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="none"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="in" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Bolt Pattern"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/boltEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="text"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Max Brake"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/brakeEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="number"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Weight"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/weightEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="numberDecimal"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="kg" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tireWidthTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Tire Width"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/tireWidthEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="number"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/aspectTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Aspect"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/aspectEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="number"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="%" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Stretch"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/stretchEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="none"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Sidewall"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/sidewallEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="none"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Circumference"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/circumferenceEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="number" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Rev/Mile"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/revsEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="number" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="TextView" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Width Range"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/widthRangeEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="TextView" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Load"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/loadEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="kg" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Pulled Fender?"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".15"
-                android:checked="false"
-                android:clickable="true"
-                android:gravity="center"
-                tools:checked="false" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".55" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Pull"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/pullEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="numberSigned" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="TextView" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/fenderHeightTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Fender Height"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/fenderHeightEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="none" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/fenderWidthTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Fender Width"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/fenderWidthEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="none" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Clearance"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/fenderOffsetEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="none" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Tuck"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/tuckEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="numberSigned" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="mm" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/camberTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Camber"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/camberEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="number"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="degrees" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
-                android:text="Fitment"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <EditText
-                android:id="@+id/fitmentEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".4"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <Button
-                android:id="@+id/saveNewButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Save" />
-        </TableRow>
+        <com.example.roundbois.SetupDiagram
+            android:id="@+id/newDiagram"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            app:showCurrent="false"
+            app:showNew="true" />
     </TableLayout>
-</ScrollView>
+
+    <TableLayout
+        android:id="@+id/newButtonTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/saveNewButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/curConfigTable"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/newSDTable"
+        android:layout_above="@id/newButtonTable">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+                    <EditText
+                        android:id="@+id/diameterEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="diameter (in)"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textAlignment="textStart" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    app:helperTextEnabled="false">
+
+                    <EditText
+                        android:id="@+id/widthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="width (in)"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textStart" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+                    <EditText
+                        android:id="@+id/offsetEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="offset (mm)"
+                        android:inputType="numberSigned"
+                        android:textAlignment="textStart" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+                    <EditText
+                        android:id="@+id/camberEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="camber (degrees)"
+                        android:inputType="numberSigned"
+                        android:textAlignment="textStart" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tireWidthTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+                    <EditText
+                        android:id="@+id/tireWidthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="tire width (mm)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/aspectTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5">
+
+                    <EditText
+                        android:id="@+id/aspectEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="aspect ratio (%)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/collapseButton"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Advanced"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/boreTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/boreEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="bore (mm)"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/insetTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/insetEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="inset (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outsetTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/outsetEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="outset (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/boltPatternTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/boltEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="bolt pattern"
+                        android:inputType="text"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/brakeTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/brakeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="brake diameter (mm)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weightTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/weightEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="weight (kg)"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/stretchTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/stretchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="stretch"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sidewallTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/sidewallEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="sidewall (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/circumferenceTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/circumferenceEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="circumference (mm)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/revsTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/revsEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Revs/Mile"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/widthRangeTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/widthRangeEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="width range (in)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loadTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/loadEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="load (kg)"
+                        android:inputType="number"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pullTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/pullEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="pull (mm)"
+                        android:inputType="numberSigned"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fenderTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/fenderHeightEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fender height (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fenderWidthTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/fenderWidthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fender width (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fenderOffsetTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/fenderOffsetEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fender offset (mm)"
+                        android:inputType="none"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tuckTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/tuckEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="tuck (mm)"
+                        android:inputType="numberSigned"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fitmentTR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/fitmentEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="fitment"
+                        android:inputType="text"
+                        android:textAlignment="textStart"
+                        android:visibility="visible" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
