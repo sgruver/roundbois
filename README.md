@@ -1,6 +1,5 @@
 # RoundBois
-
-RoundBois is an Android application to make finding and visualizing wheels are your car simple
+RoundBois is an Android application to make finding and visualizing wheels on your car simple.
 
 ## Smart Search ##
 Narrow down the wheels you want with your desired fitment using your car's specifications. The search function only shows the wheels that match your specific criteria.
